@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.toolBox-cont{
+    height: 6rem;
+    background-color:#77B6EA;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.toolBoxPriority-cont{
+    width: 16rem;
+    height: 4rem;
+    background-color: #FFFFFF;
+}
+.toolBoxAction-cont{
+    width: 16rem;
+    height: 4rem;
+    background-color: #FC814A;
+}
