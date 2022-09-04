@@ -7,19 +7,99 @@ body{
 }
 
 .toolBox-cont{
-    height: 6rem;
+    height: 8rem;
     background-color:#77B6EA;
     display: flex;
-    justify-content: space-around;
-    padding: 1rem;
+    align-items: center;
+   
+     
 }
 .toolBoxPriority-cont{
-    width: 16rem;
+    width: 25rem;
     height: 4rem;
     background-color: #FFFFFF;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
 }
 .toolBoxAction-cont{
     width: 16rem;
     height: 4rem;
     background-color: #FC814A;
+    margin-left: 4rem;
+     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+     
 }
+.div1,.div2,.div3,.div4{
+    width: 4rem;
+    height: 2rem;
+}
+.div1,.color.yellow{
+   
+    background-color: #F5E663;
+}
+.div2,.color.red{
+     
+    background-color: #9C3848;
+}
+.div3,.color.blue{
+   
+    background-color: #1E3888;
+}
+.div4,.color.orange{
+     
+    background-color: #FFAD69;
+}
+.delete,.add{
+    font-size: 2rem;
+}
+ .main-cont{
+    height: 38rem;
+    background-color: #87BBA2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .taskBox-cont{
+    width: 50%vw;
+    height: 50%vh;
+    background-color: #bad4e1;
+    display: flex;
+ }
+ .taskBoxPriority-cont{
+    width: 25rem;
+    height: 20rem;
+ }
+ .taskBoxPick-cont{
+    width: 10rem;
+    height: 20rem;
+    background-color: #77B6EA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+ }
+ textarea{
+    width: 100%vw;
+    height: 100%;
+    color: darkblue;
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 2rem;
+    padding: 1rem;
+    
+    background-color:#bad4e1 ;
+    
+ }
+ .color{
+    width: 5rem;
+    height: 3rem;
+    background-color: #fff;
+ }
