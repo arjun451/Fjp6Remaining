@@ -4,6 +4,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    background-color: #C8E087;
 }
 
 .toolBox-cont{
@@ -27,7 +28,7 @@ body{
 .toolBoxAction-cont{
     width: 16rem;
     height: 4rem;
-    background-color: #FC814A;
+    background-color: #FFFFFF;
     margin-left: 4rem;
      
     display: flex;
@@ -42,19 +43,19 @@ body{
 }
 .yellow{
    
-    background-color: #F5E663;
+    background-color: #F3B61F;
 }
-.red{
+.pink{
      
-    background-color: #9C3848;
+    background-color:#FF10F0;
 }
-.blue{
+.green{
    
-    background-color: #1E3888;
+    background-color: #72B01D;
 }
-.orange{
+.black{
      
-    background-color: #FFAD69;
+    background-color: #0D0A0B;
 }
 .delete,.add{
     font-size: 2rem;
@@ -74,7 +75,7 @@ body{
   
  .taskBoxPick-cont{
     width: 30vw;
-    background-color: #aceab5;
+    background-color: #C9C9C9;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -90,7 +91,7 @@ body{
     font-size: 2rem;
     padding: 2rem;
     
-    background-color:#bad4e1 ;
+    background-color:#FFFFFF ;
     
  }
  .color{
@@ -99,7 +100,7 @@ body{
    
  }
 .active{
-    border: .2rem solid black;
+    border: .2rem solid #FFFFFF ;
 }
 
  .main-cont{
@@ -114,7 +115,7 @@ body{
  .ticket-cont{
     width: 15rem;
     height: 10rem;
-    background-color: aqua;
+    background-color: #FFFFFF;
      
  }
 
@@ -124,11 +125,12 @@ body{
 
   .ticket-id{
     height: 1.5rem;
-     background-color:lightcoral;
+     
   }
 .ticket-area{
     height: calc(100%-1rem-1.5rem);
     padding: 2rem;
     font-size: 1.5rem;
+    word-wrap: break-word;
 
 }

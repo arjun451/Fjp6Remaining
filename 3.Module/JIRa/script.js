@@ -3,10 +3,12 @@ let module= document.querySelector(".module-cont");
 let textArea = document.querySelector("#Task");
 let mainTag = document.querySelector(".main-cont");
 let priorityTag = document.querySelectorAll(".color");
+let deleteTag = document.querySelector(".delete");
+let deleteFlage = false;
 let flage = true;
-let color = "orange";
+let color = "black";
 
-//-----------------------
+//-----------------------toggle button
 addTag.addEventListener('click',function(){
     if(flage)
     {
@@ -17,6 +19,19 @@ addTag.addEventListener('click',function(){
         module.style.display = "none";
     }
     flage = !flage;
+})
+deleteTag.addEventListener("click",function(){
+    // console.log("click fire");
+    if(deleteFlage)
+    {
+        deleteTag.style.color = 'black';
+    }
+    else
+    {
+        deleteTag.style.color= 'red';
+    }
+    deleteFlage = !deleteFlage;
+     
 })
 //------------------------------------
 for(let i=0;i<priorityTag.length;i++)
@@ -56,4 +71,17 @@ function creatTicket(value,color)
     <div class="ticket-id ">#12354DF</div>
     <div class="ticket-area">${value}</div>`;
    mainTag.appendChild(divTag);
+   //ticket delete
+ if(4)
+ {
+  divTag.addEventListener("click",function(){
+           if(deleteFlage)
+           divTag.remove();
+        
+      })
+ }
+
+   
 }
+//-------------------------------------
+ 
