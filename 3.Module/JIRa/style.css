@@ -40,7 +40,7 @@ body{
     width: 4rem;
     height: 2rem;
 }
-.div1,.color.yellow{
+.div1,.color.yellow,.ticket-color{
    
     background-color: #F5E663;
 }
@@ -58,42 +58,37 @@ body{
 }
 .delete,.add{
     font-size: 2rem;
+    cursor: pointer;
 }
- .main-cont{
-    height: 38rem;
+ .module-cont{
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    left: 25vw;
+    top: 25vh;
     background-color: #87BBA2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
+     
+     
  }
- .taskBox-cont{
-    width: 50%vw;
-    height: 50%vh;
-    background-color: #bad4e1;
-    display: flex;
- }
- .taskBoxPriority-cont{
-    width: 25rem;
-    height: 20rem;
- }
+  
  .taskBoxPick-cont{
-    width: 10rem;
-    height: 20rem;
-    background-color: #77B6EA;
+    width: 30vw;
+    background-color: #aceab5;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
  }
  textarea{
-    width: 100%vw;
-    height: 100%;
+    width: 70vw;
+    height: 50vh;
     color: darkblue;
     border: none;
     resize: none;
     outline: none;
     font-size: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     
     background-color:#bad4e1 ;
     
@@ -103,3 +98,35 @@ body{
     height: 3rem;
     background-color: #fff;
  }
+
+
+ .main-cont{
+    margin-top: 2rem;
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+ }
+
+ .ticket-cont{
+    width: 15rem;
+    height: 10rem;
+    background-color: aqua;
+     
+ }
+
+ .ticket-color{
+   height: 1rem;
+ }
+
+  .ticket-id{
+    height: 1.5rem;
+     background-color:lightcoral;
+  }
+.ticket-area{
+    height: calc(100%-1rem-1.5rem);
+    padding: 2rem;
+    font-size: 1.5rem;
+
+}
