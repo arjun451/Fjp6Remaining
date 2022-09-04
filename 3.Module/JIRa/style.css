@@ -36,23 +36,23 @@ body{
     padding: 1rem;
      
 }
-.div1,.div2,.div3,.div4{
+ .div{
     width: 4rem;
     height: 2rem;
 }
-.div1,.color.yellow,.ticket-color{
+.yellow{
    
     background-color: #F5E663;
 }
-.div2,.color.red{
+.red{
      
     background-color: #9C3848;
 }
-.div3,.color.blue{
+.blue{
    
     background-color: #1E3888;
 }
-.div4,.color.orange{
+.orange{
      
     background-color: #FFAD69;
 }
@@ -96,9 +96,11 @@ body{
  .color{
     width: 5rem;
     height: 3rem;
-    background-color: #fff;
+   
  }
-
+.active{
+    border: .2rem solid black;
+}
 
  .main-cont{
     margin-top: 2rem;
