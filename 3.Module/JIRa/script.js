@@ -71,17 +71,14 @@ function creatTicket(value,color)
     <div class="ticket-id ">#12354DF</div>
     <div class="ticket-area">${value}</div>`;
    mainTag.appendChild(divTag);
-   //ticket delete
- if(4)
- {
-  divTag.addEventListener("click",function(){
-           if(deleteFlage)
-           divTag.remove();
-        
-      })
- }
 
-   
+   //delete ticket
+    divTag.addEventListener("click",function(){
+        if(deleteFlage)
+        {
+            divTag.remove();
+        }
+    })
 }
 //-------------------------------------
  
