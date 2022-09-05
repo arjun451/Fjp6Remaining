@@ -9,7 +9,7 @@ let flage = true;
 let color = "black";
 let colorArray = ["yellow","pink","green","black"];
 
-//-----------------------toggle button
+//-----------------------toggale button
 addTag.addEventListener('click',function(){
     if(flage)
     {
@@ -70,9 +70,26 @@ function creatTicket(value,color)
     divTag.setAttribute("class","ticket-cont");
     divTag.innerHTML = `<div class="ticket-color ${color}"></div>
     <div class="ticket-id ">#12354DF</div>
-    <div class="ticket-area">${value}</div>`;
+    <div class="ticket-area">${value}</div>
+    <div class="lock-unlock"><i class="fa fa-lock"></i></div>`;
    mainTag.appendChild(divTag);
-
+   
+   //lock-unlock 
+   let lockTag = divTag.querySelector(".lock-unlock i");
+   lockTag.addEventListener('click',function(){
+       if(lockTag.classList.contains("fa-lock"))
+       {
+         lockTag.classList.remove("fa-lock");
+         lockTag.classList.add("fa-unlock");
+       }
+       else
+       {
+        lockTag.classList.remove("fa-unlock");
+        lockTag.classList.add("fa-lock");
+        
+       }
+   })
+    
    //delete ticket
     divTag.addEventListener("click",function(){
         if(deleteFlage)
