@@ -7,6 +7,7 @@ let deleteTag = document.querySelector(".delete");
 let deleteFlage = false;
 let flage = true;
 let color = "black";
+let colorArray = ["yellow","pink","green","black"];
 
 //-----------------------toggle button
 addTag.addEventListener('click',function(){
@@ -79,6 +80,26 @@ function creatTicket(value,color)
             divTag.remove();
         }
     })
+
+  //add ticket color property
+  let colorTicket = divTag.querySelector(".ticket-color");
+  colorTicket.addEventListener('click',function(){
+    // console.log("click fire");
+   let currentColor = colorTicket.classList[1];
+   let index=-1;
+    for(let i=0;i<colorArray.length;i++)
+    {
+        if(currentColor==colorArray[i])
+        {
+            index=(i+1)%(colorArray.length);
+        }
+    }
+   let nextColor = colorArray[index];
+   colorTicket.classList.remove(currentColor);
+   colorTicket.classList.add(nextColor);
+
+
+  })
 }
 //-------------------------------------
  
