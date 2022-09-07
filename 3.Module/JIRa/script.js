@@ -8,6 +8,7 @@ let deleteFlage = false;
 let flage = true;
 let color = "black";
 let colorArray = ["yellow","pink","green","black"];
+var uid = new ShortUniqueId();
 
 //-----------------------toggale button
 addTag.addEventListener('click',function(){
@@ -69,7 +70,7 @@ function creatTicket(value,color)
     let divTag = document.createElement("div");
     divTag.setAttribute("class","ticket-cont");
     divTag.innerHTML = `<div class="ticket-color ${color}"></div>
-    <div class="ticket-id ">#12354DF</div>
+    <div class="ticket-id ">#${uid()}</div>
     <div class="ticket-area">${value}</div>
     <div class="lock-unlock"><i class="fa fa-lock"></i></div>`;
    mainTag.appendChild(divTag);
