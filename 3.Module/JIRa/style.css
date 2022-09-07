@@ -128,14 +128,18 @@ body{
      
   }
 .ticket-area{
-    min-height: calc(100%-1rem-1.5rem);
-    padding: 2rem;
+    height: 5rem;
+    
+    padding: 1rem;
     font-size: 1.5rem;
-    word-wrap: break-word;
+    overflow: auto;
+     outline: none;
+    word-break: break-all;
+     
 
 }
 .lock-unlock{
-    margin-left: 13rem;
-    margin-top: -.5rem;
+    margin-left: 13.5rem;
+     margin-top: 1rem;
     font-size: 1.5rem;
 }

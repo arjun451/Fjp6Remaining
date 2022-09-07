@@ -75,18 +75,20 @@ function creatTicket(value,color)
    mainTag.appendChild(divTag);
    
    //lock-unlock 
+   let ticketArea = divTag.querySelector(".ticket-area");
    let lockTag = divTag.querySelector(".lock-unlock i");
    lockTag.addEventListener('click',function(){
        if(lockTag.classList.contains("fa-lock"))
        {
          lockTag.classList.remove("fa-lock");
          lockTag.classList.add("fa-unlock");
+          ticketArea.setAttribute('contenteditable',true);
        }
        else
        {
         lockTag.classList.remove("fa-unlock");
         lockTag.classList.add("fa-lock");
-        
+        ticketArea.setAttribute('contenteditable',false);
        }
    })
     
