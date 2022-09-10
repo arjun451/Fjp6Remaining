@@ -9,18 +9,60 @@ let flage = true;
 let color = "black";
 let colorArray = ["yellow","pink","green","black"];
 var uid = new ShortUniqueId();
-let ticketArray = [{"TicketColor":"green","TicketCont":"fvfvfvf","TicketId":123},{"TicketColor":"black","TicketCont":"dfvkfkv","TicketId":244221}];
+let ticketArray = [ ];
 let id;
+let toolBoxColor = document.querySelectorAll(".div");
+
 
 //create ticket using array values
- for(let i=0;i<ticketArray.length;i++)
- {
-    let value = ticketArray[i].TicketCont;
-    let color = ticketArray[i].TicketColor;
-    let tid = ticketArray[i].TicketId;
-    creatTicket(value,color,tid);
- }  
+//  for(let i=0;i<ticketArray.length;i++)
+//  {
+//     let value = ticketArray[i].TicketCont;
+//     let color = ticketArray[i].TicketColor;
+//     let tid = ticketArray[i].TicketId;
+//     creatTicket(value,color,tid);
+//  }  
  
+//Apply the filter
+for(let i=0;i<toolBoxColor.length;i++)
+{
+    toolBoxColor[i].addEventListener('click',function(){
+        let filterColor = toolBoxColor[i].classList[1];
+        let filterticket=[];
+
+        for(let j=0;j<ticketArray.length;j++)
+        {
+            if(ticketArray[j].TicketColor==filterColor)
+            {
+                filterticket.push(ticketArray[j]);
+            }
+        }
+      //remove all ticket
+        let allticket = document.querySelectorAll(".ticket-cont");
+        for(let j=0;j<allticket.length;j++)
+        {
+            allticket[j].remove();
+        }
+       //create filter ticket 
+     for(let k=0;k<filterticket.length;k++)
+    {
+    let value = filterticket[k].TicketCont;
+    let color = filterticket[k].TicketColor;
+    let tid = filterticket[k].TicketId;
+    creatTicket(value,color,tid);
+    } 
+    })
+    toolBoxColor[i].addEventListener('dblclick',function(){
+     
+    for(let k=0;k<ticketArray.length;k++)
+    {
+    let value = ticketArray[k].TicketCont;
+    let color = ticketArray[k].TicketColor;
+    let tid = ticketArray[k].TicketId;
+    creatTicket(value,color,tid);
+    }  
+    })
+}
 //-----------------------toggale button
 addTag.addEventListener('click',function(){
     if(flage)
@@ -139,6 +181,13 @@ function creatTicket(value,color,ticketId)
    let nextColor = colorArray[index];
    colorTicket.classList.remove(currentColor);
    colorTicket.classList.add(nextColor);
+//    for(let j=0;j<ticketArray.length;j++)
+//    {
+//     if(ticketArray[i].TicketId==id)
+//     {
+//         ticketArray[i].TicketColor=nextColor;
+//     }
+//    }
 
 
   })
