@@ -159,6 +159,8 @@ function creatTicket(value,color,ticketId)
         lockTag.classList.add("fa-lock");
         ticketArea.setAttribute('contenteditable',false);
        }
+       let index = getIndex(id);
+       ticketArray[index].TicketCont = ticketArea.textContent;
    })
     
    //delete ticket
@@ -166,6 +168,9 @@ function creatTicket(value,color,ticketId)
         if(deleteFlage)
         {
             divTag.remove();
+
+            let index = getIndex(id);
+            ticketArray.splice(index,1);
         }
     })
 
@@ -185,15 +190,8 @@ function creatTicket(value,color,ticketId)
    let nextColor = colorArray[index];
    colorTicket.classList.remove(currentColor);
    colorTicket.classList.add(nextColor);
-   let ticketindex=-1;
-   for(let j=0;j<ticketArray.length;j++)
-   {
-    if(ticketArray[j].TicketId==id)
-    {
-        ticketindex=j;
-        break;
-    }
-   }
+   let ticketindex=getIndex(id);
+   
   ticketArray[ticketindex].TicketColor=nextColor;
 
   })
@@ -204,4 +202,13 @@ function creatTicket(value,color,ticketId)
    }
 }
 //-------------------------------------
- 
+ function getIndex(id)
+ {
+    for(let j=0;j<ticketArray.length;j++)
+    {
+     if(ticketArray[j].TicketId==id)
+     {
+         return j;
+     }
+    }
+ }
