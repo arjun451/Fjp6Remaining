@@ -9,7 +9,18 @@ let flage = true;
 let color = "black";
 let colorArray = ["yellow","pink","green","black"];
 var uid = new ShortUniqueId();
+let ticketArray = [{"TicketColor":"green","TicketCont":"fvfvfvf","TicketId":123},{"TicketColor":"black","TicketCont":"dfvkfkv","TicketId":244221}];
+let id;
 
+//create ticket using array values
+ for(let i=0;i<ticketArray.length;i++)
+ {
+    let value = ticketArray[i].TicketCont;
+    let color = ticketArray[i].TicketColor;
+    let tid = ticketArray[i].TicketId;
+    creatTicket(value,color,tid);
+ }  
+ 
 //-----------------------toggale button
 addTag.addEventListener('click',function(){
     if(flage)
@@ -53,24 +64,35 @@ module.addEventListener("keydown",function(e){
     let keyValue = e.key;
     if(keyValue=="Enter")
     {
+          id =uid();
         creatTicket(textArea.value,color);
         
         textArea.value = "";
         module.style.display = "none";
 
        
-
+        console.log(ticketArray);
     }
     flage = !flage;
+    
 })
 //----------------------------------------
-function creatTicket(value,color)
+function creatTicket(value,color,ticketId)
 {
-     
+    let id;
+     if(ticketId==undefined)
+     {
+      id = uid();
+      
+     }
+     else
+     {
+      id = ticketId;
+     }
     let divTag = document.createElement("div");
     divTag.setAttribute("class","ticket-cont");
     divTag.innerHTML = `<div class="ticket-color ${color}"></div>
-    <div class="ticket-id ">#${uid()}</div>
+    <div class="ticket-id ">#${id}</div>
     <div class="ticket-area">${value}</div>
     <div class="lock-unlock"><i class="fa fa-lock"></i></div>`;
    mainTag.appendChild(divTag);
@@ -120,6 +142,11 @@ function creatTicket(value,color)
 
 
   })
+   if(ticketId==undefined)
+   {
+    let obj={"TicketColor":color,"TicketCont":value,"TicketId":id};
+      ticketArray.push(obj);
+   }
 }
 //-------------------------------------
  
