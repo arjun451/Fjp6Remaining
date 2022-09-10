@@ -53,7 +53,11 @@ for(let i=0;i<toolBoxColor.length;i++)
     } 
     })
     toolBoxColor[i].addEventListener('dblclick',function(){
-     
+        let allticket = document.querySelectorAll(".ticket-cont");
+        for(let j=0;j<allticket.length;j++)
+        {
+            allticket[j].remove();
+        }
     for(let k=0;k<ticketArray.length;k++)
     {
     let value = ticketArray[k].TicketCont;
@@ -181,14 +185,16 @@ function creatTicket(value,color,ticketId)
    let nextColor = colorArray[index];
    colorTicket.classList.remove(currentColor);
    colorTicket.classList.add(nextColor);
-//    for(let j=0;j<ticketArray.length;j++)
-//    {
-//     if(ticketArray[i].TicketId==id)
-//     {
-//         ticketArray[i].TicketColor=nextColor;
-//     }
-//    }
-
+   let ticketindex=-1;
+   for(let j=0;j<ticketArray.length;j++)
+   {
+    if(ticketArray[j].TicketId==id)
+    {
+        ticketindex=j;
+        break;
+    }
+   }
+  ticketArray[ticketindex].TicketColor=nextColor;
 
   })
    if(ticketId==undefined)
