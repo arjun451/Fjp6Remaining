@@ -13,7 +13,19 @@ let ticketArray = [ ];
 let id;
 let toolBoxColor = document.querySelectorAll(".div");
 
+if(localStorage.getItem("tickets"))
+{
+    let arr = JSON.parse(localStorage.getItem("tickets"));
+    ticketArray = arr;
+    for(let i=0;i<arr.length;i++)
+   {
+    let value = arr[i].TicketCont;
+    let color = arr[i].TicketColor;
+     let tid = arr[i].TicketId;
+    creatTicket(value,color,tid);
+  } 
 
+}
 //create ticket using array values
 //  for(let i=0;i<ticketArray.length;i++)
 //  {
@@ -102,6 +114,7 @@ for(let i=0;i<priorityTag.length;i++)
         }
         priorityTag[i].classList.add("active");
         color = priorityTag[i].classList[0];
+        
     })
 }
 
@@ -161,6 +174,7 @@ function creatTicket(value,color,ticketId)
        }
        let index = getIndex(id);
        ticketArray[index].TicketCont = ticketArea.textContent;
+       setLocalStorage();
    })
     
    //delete ticket
@@ -171,6 +185,7 @@ function creatTicket(value,color,ticketId)
 
             let index = getIndex(id);
             ticketArray.splice(index,1);
+            setLocalStorage();
         }
     })
 
@@ -193,12 +208,13 @@ function creatTicket(value,color,ticketId)
    let ticketindex=getIndex(id);
    
   ticketArray[ticketindex].TicketColor=nextColor;
-
+   setLocalStorage();
   })
    if(ticketId==undefined)
    {
     let obj={"TicketColor":color,"TicketCont":value,"TicketId":id};
       ticketArray.push(obj);
+      setLocalStorage();
    }
 }
 //-------------------------------------
@@ -211,4 +227,9 @@ function creatTicket(value,color,ticketId)
          return j;
      }
     }
+ }
+ function setLocalStorage()
+ {
+    let stringifArray= JSON.stringify(ticketArray);
+    localStorage.setItem("tickets",stringifArray);
  }
