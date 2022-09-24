@@ -18,7 +18,7 @@ function initCell()
         cellContain+=`<div class="left-column-cell">${i}</div>`;
      }
      cellContain+=`</div>`
-     cellContain+=`<div class="cells"`;
+     cellContain+=`<div class="cells">`;
     for(let i=1;i<=100;i++)
     {
         cellContain+='<div class="row">';
