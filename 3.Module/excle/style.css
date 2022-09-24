@@ -1,0 +1,35 @@
+ *{
+    padding: 0px;
+    box-sizing: content-box;
+ }
+ .option-menu{
+    border: .5px solid;
+    
+    height: 30px;
+   
+ }
+ .address-contain{
+border: .5px solid;
+height: 30px;
+ 
+ }
+ .cell-contain{
+border: .5px solid;
+ background-color: rgb(245, 131, 222);
+height: 85vh;
+overflow: auto;
+ 
+
+ }
+ .sheets{
+  border:  .5px solid;
+  height: 30px;
+ }
+ .cell{
+    width: 120px;
+    height: 40px;
+    border: .5px solid;
+ }
+ .row{
+    display: flex;
+ }
