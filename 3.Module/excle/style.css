@@ -32,8 +32,9 @@ height: 30px;
     height: 40px;
     border: .5px solid;
     border-top: none;
-     
+     background-color: gray;
     position: absolute;
+    z-index: 2;
      
  }
  .top-row{
@@ -43,6 +44,7 @@ height: 30px;
     background-color: #fff;
    position: absolute;
    margin-left: 40px;
+   z-index: 1;
  }
  .top-row-cell{
    width: 80px;
@@ -52,11 +54,13 @@ height: 30px;
    display: flex;
    justify-content: center;
    align-items: center;
+   
  }
  .left-column{
     margin-top: 40px;
     background-color: green;
    position: absolute;
+   z-index: 1;
  }
  .left-column-cell{
    width: 40px;
